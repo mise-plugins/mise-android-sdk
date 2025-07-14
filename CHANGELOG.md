@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/mise-plugins/mise-android-sdk/compare/v1.1.0...v1.2.0) (2025-07-14)
+
+
+### Features
+
+* append more frequently used `bin` directory to `PATH` ([#18](https://github.com/mise-plugins/mise-android-sdk/issues/18)) ([36ef3bb](https://github.com/mise-plugins/mise-android-sdk/commit/36ef3bbfdf475cffe23dc7430865bc2083b2fe35))
+
 ## [1.1.0](https://github.com/Syquel/mise-android-sdk/compare/v1.0.0...v1.1.0) (2024-05-03)
 
 
