@@ -7,7 +7,7 @@ jobs:
     name: CI Workflow Linting
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       # Check GitHub CI workflows
       - name: Check workflow files
         uses: docker://rhysd/actionlint:latest
