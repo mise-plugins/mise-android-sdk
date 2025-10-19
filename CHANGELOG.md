@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/mise-plugins/mise-android-sdk/compare/v1.1.0...v1.2.0) (2025-10-19)
+
+
+### Features
+
+* append more frequently used `bin` directory to `PATH` ([#18](https://github.com/mise-plugins/mise-android-sdk/issues/18)) ([36ef3bb](https://github.com/mise-plugins/mise-android-sdk/commit/36ef3bbfdf475cffe23dc7430865bc2083b2fe35))
+
+
+### Bug Fixes
+
+* support namespace handling in yq v4.48.1 ([#28](https://github.com/mise-plugins/mise-android-sdk/issues/28)) ([1e01e33](https://github.com/mise-plugins/mise-android-sdk/commit/1e01e3373815050a3788469bb1cbf6c1fb36e236))
+
 ## [1.1.0](https://github.com/Syquel/mise-android-sdk/compare/v1.0.0...v1.1.0) (2024-05-03)
 
 
