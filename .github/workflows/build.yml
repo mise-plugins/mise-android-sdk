@@ -16,7 +16,7 @@ jobs:
         with:
           submodules: true
       # Install development dependencies
-      - uses: jdx/mise-action@v2
+      - uses: jdx/mise-action@v3
       # Lint project files
       - run: ./scripts/lint.bash
       # Test plugin
