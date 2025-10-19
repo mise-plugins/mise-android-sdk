@@ -57,15 +57,15 @@ function run_utils_function() {
 	run run_utils_function fetch_android_sdk_metadata "file://${BATS_TEST_DIRNAME}/resources/android_sdk_repository_minimal"
 	assert_success
 
-	output="$(yq --input-format xml --output-format props <<< "${output}")"
+	output="$(yq --input-format xml --output-format props --xml-keep-namespace=false <<< "${output}")"
 
 	assert_output --stdin <<- EOT
 		+p_xml = version='1.0' encoding='utf-8'
-		sdk-repository.+@xmlns\:sdk = http://schemas.android.com/sdk/android/repo/repository2/03
-		sdk-repository.+@xmlns\:common = http://schemas.android.com/repository/android/common/02
-		sdk-repository.+@xmlns\:sdk-common = http://schemas.android.com/sdk/android/repo/common/03
-		sdk-repository.+@xmlns\:generic = http://schemas.android.com/repository/android/generic/02
-		sdk-repository.+@xmlns\:xsi = http://www.w3.org/2001/XMLSchema-instance
+		sdk-repository.+@sdk = http://schemas.android.com/sdk/android/repo/repository2/03
+		sdk-repository.+@common = http://schemas.android.com/repository/android/common/02
+		sdk-repository.+@sdk-common = http://schemas.android.com/sdk/android/repo/common/03
+		sdk-repository.+@generic = http://schemas.android.com/repository/android/generic/02
+		sdk-repository.+@xsi = http://www.w3.org/2001/XMLSchema-instance
 		sdk-repository.channel.0.+content = stable
 		sdk-repository.channel.0.+@id = channel-0
 		sdk-repository.channel.1.+content = beta
@@ -75,7 +75,7 @@ function run_utils_function() {
 		sdk-repository.channel.3.+content = canary
 		sdk-repository.channel.3.+@id = channel-3
 		sdk-repository.remotePackage.0.+@path = cmdline-tools;13.0
-		sdk-repository.remotePackage.0.type-details.+@xsi\:type = generic:genericDetailsType
+		sdk-repository.remotePackage.0.type-details.+@type = generic:genericDetailsType
 		sdk-repository.remotePackage.0.revision.major = 13
 		sdk-repository.remotePackage.0.revision.minor = 0
 		sdk-repository.remotePackage.0.display-name = Android SDK Command-line Tools
@@ -97,7 +97,7 @@ function run_utils_function() {
 		sdk-repository.remotePackage.0.archives.archive.2.complete.url = commandlinetools-win-11479570_latest.zip
 		sdk-repository.remotePackage.0.archives.archive.2.host-os = windows
 		sdk-repository.remotePackage.1.+@path = cmdline-tools;13.0-rc01
-		sdk-repository.remotePackage.1.type-details.+@xsi\:type = generic:genericDetailsType
+		sdk-repository.remotePackage.1.type-details.+@type = generic:genericDetailsType
 		sdk-repository.remotePackage.1.revision.major = 13
 		sdk-repository.remotePackage.1.revision.minor = 0
 		sdk-repository.remotePackage.1.revision.preview = 01
@@ -129,11 +129,11 @@ function run_utils_function() {
 	run run_utils_function parse_android_sdk_metadata "" "${metadata}" "cmdline-tools"
 	assert_success
 
-	output="$(yq --input-format yaml --output-format props <<< "${output}")"
+	output="$(yq --input-format yaml --output-format props --xml-keep-namespace=false <<< "${output}")"
 
 	assert_output --stdin <<- EOT
 		0.+@path = cmdline-tools;13.0-rc01
-		0.type-details.+@xsi\:type = generic:genericDetailsType
+		0.type-details.+@type = generic:genericDetailsType
 		0.revision.major = 13
 		0.revision.minor = 0
 		0.revision.preview = 01
@@ -156,7 +156,7 @@ function run_utils_function() {
 		0.archives.archive.2.complete.url = commandlinetools-win-11379558_latest.zip
 		0.archives.archive.2.host-os = windows
 		1.+@path = cmdline-tools;13.0
-		1.type-details.+@xsi\:type = generic:genericDetailsType
+		1.type-details.+@type = generic:genericDetailsType
 		1.revision.major = 13
 		1.revision.minor = 0
 		1.display-name = Android SDK Command-line Tools
