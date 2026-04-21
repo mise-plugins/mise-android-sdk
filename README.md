@@ -37,7 +37,7 @@ mise plugins install android-sdk https://github.com/mise-plugins/mise-android-sd
 
 ### asdf
 ```shell
-asdf plugin add android-sdk https://github.com/mise-plugins/mise-android-sdk
+asdf plugin add android-sdk https://github.com/mise-plugins/mise-android-sdk.git
 ```
 
 ## Android SDK
