@@ -32,7 +32,7 @@
 ## Plugin
 ### mise
 ```shell
-mise plugins install android-sdk https://github.com/mise-plugins/mise-android-sdk
+mise plugins install android-sdk https://github.com/mise-plugins/mise-android-sdk.git
 ```
 
 ### asdf
