@@ -32,12 +32,12 @@
 ## Plugin
 ### mise
 ```shell
-mise plugins install android-sdk https://github.com/Syquel/mise-android-sdk.git
+mise plugins install android-sdk https://github.com/mise-plugins/mise-android-sdk.git
 ```
 
 ### asdf
 ```shell
-asdf plugin add android-sdk https://github.com/Syquel/mise-android-sdk.git
+asdf plugin add android-sdk https://github.com/mise-plugins/mise-android-sdk.git
 ```
 
 ## Android SDK
