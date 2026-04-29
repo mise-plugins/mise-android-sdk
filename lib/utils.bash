@@ -49,7 +49,7 @@ function parse_android_sdk_metadata() {
 
 	local parse_command='
 		# Extract available Android SDK packages
-		.sdk-repository.remotePackage |
+		."sdk:sdk-repository".remotePackage |
 
 		# Infer appropriate data types automatically
 		(.. | select(tag == "!!str")) |= from_yaml |
